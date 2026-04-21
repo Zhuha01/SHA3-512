@@ -4,7 +4,6 @@ const { sha3_512_js_sha3 } = require('../example/js_sha3');
 
 jest.setTimeout(120000);
 
-/** Максимальний час однієї фази (1000 ітерацій); підніміть значення на дуже слабкому залізі. */
 const MAX_MS_PER_IMPLEMENTATION = 110000;
 
 describe('Порівняння продуктивності SHA3-512: crypto vs js-sha3', () => {
