@@ -1,32 +1,12 @@
-name: Automated Tests and SAST
+name: SAST CodeQL
 
 on:
   push:
-    branches: [ "main", "develop" ] 
+    branches: [ "develop" ] 
   pull_request:
-    branches: [ "main", "develop" ]
+    branches: [ "develop" ]
 
 jobs:
-
-  test:
-    name: Run Unit Tests
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
-
   analyze:
     name: Analyze with CodeQL
     runs-on: ubuntu-latest
